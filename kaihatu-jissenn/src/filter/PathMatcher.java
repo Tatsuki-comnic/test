@@ -6,6 +6,7 @@ public class PathMatcher {
 		
 		if (path.matches("/login.do") || 
 			path.matches("/sign-up.*") ||
+			path.matches("/library-address.*") ||
 		    path.endsWith(".*(.css)|(.js)|(.gif)|(.png)|(.jpg)")) {
 			
 			return true;
