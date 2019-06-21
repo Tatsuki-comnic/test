@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="servlet-jsp-lesson" path="/servlet-jsp-lesson" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson"/><Context docBase="servlet-jsp-lesson2" path="/servlet-jsp-lesson2" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson2"/><Context docBase="servlet-jsp-lesson3" path="/servlet-jsp-lesson3" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson3"/><Context docBase="kaihatu-jissen" path="/kaihatu-jissen" reloadable="true" source="org.eclipse.jst.jee.server:kaihatu-jissen"/></Host>
+      <Context docBase="servlet-jsp-lesson" path="/servlet-jsp-lesson" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson"/><Context docBase="servlet-jsp-lesson2" path="/servlet-jsp-lesson2" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson2"/><Context docBase="servlet-jsp-lesson3" path="/servlet-jsp-lesson3" reloadable="true" source="org.eclipse.jst.jee.server:servlet-jsp-lesson3"/><Context docBase="kaihatu-jissenn" path="/kaihatu-jissenn2" reloadable="true" source="org.eclipse.jst.jee.server:kaihatu-jissenn"/></Host>
     </Engine>
   </Service>
 </Server>
