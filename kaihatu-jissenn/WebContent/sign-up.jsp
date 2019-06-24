@@ -1,69 +1,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
-	<head>
-	<!-- このリンクは市町村の図を表示させるcss -->
-		<link href="http://calil.jp/public/css/calilapi.css" rel="stylesheet" type="text/css" />
+<head>
 
-		<meta charset="UTF-8">
-		<title>アカウント登録</title>
+	<meta charset="UTF-8">
+
+	<!-- このリンクは市町村の図を表示させるcss -->
+	<link href="http://calil.jp/public/css/calilapi.css" rel="stylesheet" type="text/css" />
+	<!-- cssのフレームワーク -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>アカウント登録</title>
 	<style>
-		
-	
+		/*　　　　 cssのフレームワーク*/
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</style>
 	
 	
 	
-	</head>
-	<body class="">
-		<div class="container">
+</head>
+<body class="">
+	<div class="container">
+		<div class="alert alert-success" role="alert">
 			<h2>アカウントを登録する</h2>
-			<div class="row">
-				<form class="col s12" action="sign-up.do" method="post">
-				   	<div class="row">
-						<div id="change_lib" >
-							<h2>登録する図書館の市町村:<strong id="pref_name"> </strong></h2>
-							<h4>図書館システムID:<strong id="test_name">
-						</div>
-						<div id = system-id>
-							<span id="library_change" style="font-size: 85%;"> (<a href="javascript:city_selector.showDlg();">図書館変更</a>)</span>
-						</div>
-					</div>
-				
-					<div class="row">
-						<div class="input-field col s6">
-							<input id="user_name" name="userName" type="text" class="validate" 
-							       placeholder="input your name" autofocus required>
-							<label for="user_name">Username</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<input id="password" name="password1" type="password"
-								   class="validate" required>
-							<label for="password">Password</label>
-						</div>
-						<div class="input-field col s12">
-							<input id="password" name="password2" type="password"
-								   class="validate" required>
-						    <label for="password">Password</label>
-						</div>
-					</div>
-			
-					<input class="btn waves-effect #d7ccc8 brown lighten-4"
-						   type="submit" value="アカウント登録">
-					<p class="red-text darken-2">${error}</p>
-				</form>
-			</div>
 		</div>
-		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="http://calil.jp/public/js/calilapi.js">			
-		</script>
-		<script type="text/javascript">								
-		
-			
+		<div class="row">
+			<form class="col s12" action="sign-up.do" method="post">
+				<div class="form-group">
+
+					
+					<div class="form-group">
+						<label for="user_name">Username</label>
+						<input class="form-control" id="user_name" name="userName" type="text"
+						placeholder="ユーザー名を入力してください" autofocus required>
+					</div>
+
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input id="password" name="password1" type="password"
+						class="form-control" placeholder="パスワードを入力してください"　required>
+					</div>
+
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input id="password" name="password2" type="password"
+						class="form-control" placeholder="パスワードをもう一度入力してください"　required>
+					</div>
+					<br>
+
+					<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">図書館登録</a></button>
+					<div id="change_lib" >
+						<h3>登録する図書館の市町村: <span class="badge badge-secondary"><strong id="pref_name"> </strong></span></h3>
+						<h3>図書館システムID: <span class="badge badge-secondary"><strong id="test_name"></span></h3>
+						</div>
+
+						<br>
+
+						<button type="button" class="btn btn-warning">アカウント登録</button>
+						<p class="red-text darken-2">${error}</p>
+					</form>
+				</div>
+			</div>
+
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script type="text/javascript" src="http://calil.jp/public/js/calilapi.js">	</script>
+			<script type="text/javascript">								
+
+
 			//市町村選択時に実行される関数
 			function on_select_city(systemid, pref){
 				systemid_list = systemid;
@@ -88,4 +93,4 @@
 		</script>
 		
 	</body>
-</html>
+	</html>
