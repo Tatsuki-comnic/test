@@ -51,6 +51,7 @@
 					<br>
 
 					<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">図書館登録</a></button>
+					
 					<div id="change_lib" >
 						<h3>登録する図書館の市町村: <span class="badge badge-secondary"><strong id="pref_name"> </strong></span></h3>
 						<h3>図書館システムID: <span class="badge badge-secondary"><strong id="test_name"></span></h3>
@@ -59,6 +60,7 @@
 						<br>
 
 						<button type="button" class="btn btn-warning">アカウント登録</button>
+						<button type="submit" class="btn btn-warning" ><a href="loginback.do">戻る</a></button>
 						<p class="red-text darken-2">${error}</p>
 					</form>
 				</div>

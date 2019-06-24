@@ -6,8 +6,8 @@
     <param-value>controller.LoginAction</param-value>
   </context-param>
   <context-param>
-    <param-name>/logout.do</param-name>
-    <param-value>controller.LogoutAction</param-value>
+    <param-name>/loginback.do</param-name>
+    <param-value>controller.LoginBackAction</param-value>
   </context-param>
   <context-param>
     <param-name>/sign-up.do</param-name>
