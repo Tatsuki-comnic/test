@@ -6,13 +6,15 @@ public class Account {
 
 	private String userName;
 	private String password;
+	private String system_ID;
 	private LocalDateTime lastLoginTime;
 	private boolean isAuthenticated = false;
 
-	public Account(String userName, String password) {
+	public Account(String userName, String password,String system_ID) {
 
 		this.userName = userName;
 		this.password = password;
+		this.system_ID=system_ID;
 	}
 
 	public Account() {}
@@ -30,6 +32,13 @@ public class Account {
 	}
 
 	public void setPassword(String password) {
+		this.system_ID = system_ID;
+	}
+	public String getsystem_ID() {
+		return system_ID;
+	}
+
+	public void setsystem_ID(String password) {
 		this.password = password;
 	}
 

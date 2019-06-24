@@ -19,6 +19,7 @@ public class SignUpAction implements Action {
 		String userName = request.getParameter("userName");
 		String password1 = request.getParameter("password1");
 		String password2 = request.getParameter("password2");
+		String system_ID = request.getParameter("system_ID");
 		
 		if (!password1.equals(password2)) {
 			request.setAttribute("error", "Password doesn't much.");
@@ -33,7 +34,7 @@ public class SignUpAction implements Action {
 				return new Forwarder(request, response, "sign-up");
 			}
 			
-			account = new Account(userName, password1);
+			account = new Account(userName, password1,system_ID);
 			AccountDao.save(account);
 			
 		} catch (DaoException e) {

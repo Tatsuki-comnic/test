@@ -50,7 +50,7 @@ public class AccountDaoTest extends DBTestCase {
 	public void testFindById() throws Exception{
 
 	    // 期待される結果を表すEntityの生成
-	    Account expectedAccount = new Account("John", "admin");
+	    Account expectedAccount = new Account("John", "admin","Ibaraki_Toride");
 	    expectedAccount.setAuthenticated(true);
 	   
 	    // 実際に取得するEntity
