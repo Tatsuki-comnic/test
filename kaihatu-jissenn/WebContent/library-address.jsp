@@ -405,6 +405,6 @@
 </script>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDAmWoGHEFxCg2MJB4iZ38Rd4S72zbLt8&callback&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>

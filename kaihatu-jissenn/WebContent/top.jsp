@@ -39,24 +39,27 @@
 			<div id="content">
 				<!-- 選択 -->
 				<div id="library" >
-					<h3>選択している図書館: <strong id="pref_name"></strong></h3>
+					<h3>今選択している図書館: <strong id="pref_name"></strong></h3>
 					<br>
-					<!-- 
+				
 					<div id ="select-lib">
 						<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">別の市町村から図書館を選択</a></button>
+						<strong id="registration_library"> ${library.place}</strong>
 					</div>
 				    <br>
 
 					<div id="change_lib" >
+					　　　<h3>あなたが登録した図書館: <strong id="pref_name"></strong></h3>
 						<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">登録している図書館の変更</a></button>
 						<strong id="registration_library"> ${library.place}</strong>
-					</div> -->				
+					</div> 			
 
-					<div class="btn-group" role="group" aria-label="Basic example">
+
+					<!-- 	<div class="btn-group" role="group" aria-label="Basic example">
 						<button type="button" class="btn btn-outline-info"><a href="javascript:city_selector.showDlg();" class="alert-link">別の市町村から図書館を選択</a></button>
 						<button type="button" class="btn btn-outline-info"><a href="javascript:city_selector.showDlg();" class="alert-link">登録図書館の変更</a></button>
 						<strong id="registration_library"> ${library.place}</strong>
-					</div>
+					</div>-->	
 				</div>
 				<br>
 
