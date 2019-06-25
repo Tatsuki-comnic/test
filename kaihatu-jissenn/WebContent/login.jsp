@@ -38,10 +38,14 @@
 							
 						</div>
 					</div>
-					<button type="submit" class="btn btn-warning">ログイン</button>
-					<!-- <input class="btn waves-effect #d7ccc8 brown lighten-4" type="submit" value="Login"> -->
-					<button type="submit" class="btn btn-warning" ><a href="mapback.do">マップに戻る</a></button>
+					
 					<p class="red-text darken-2">${error}</p>
+					
+					<button type="submit" class="btn btn-warning">ログイン</button>
+					
+					<button type="button" class="btn btn-warning" ><a href="mapback.do">マップに戻る</a></button>
+					
+					<br>
 					<div>新しいアカウントを登録する: <a href="sign-up">Sign-Up</a></div>
 					
 				</form>

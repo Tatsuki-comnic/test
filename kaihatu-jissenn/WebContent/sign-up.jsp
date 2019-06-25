@@ -63,13 +63,12 @@
 						<input id="password2" name="password2" type="password"
 						class="form-control" placeholder="パスワードをもう一度入力してください"　required>
 					</div>
-
-
-					<br>
-
+				
+					<p class="red-text darken-2">${error}</p>			
+					
 					<button type="submit" class="btn btn-warning">アカウント登録</button>
-					<button type="submit" class="btn btn-warning" ><a href="loginback.do">ログイン画面に戻る</a></button>
-					<p class="red-text darken-2">${error}</p>
+					<button type="button" class="btn btn-warning" ><a href="loginback.do">ログイン画面に戻る</a></button>
+					
 					</form>
 				</div>
 			</div>
