@@ -70,7 +70,7 @@
 								<th>タイトル</th>
 								<th>著者</th>
 							</tr>
-						</thead>>
+						</thead>
 						<tbody>
 							<c:forEach var="book" items="${bookList}">
 							<tr>
