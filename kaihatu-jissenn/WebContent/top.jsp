@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://sargue.net/jsptags/time" prefix="javatime"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,8 +80,7 @@
 								<td><img src="img/${book.isbn}.webp" width="65px" height="15%"></td>
 								<td>${book.isbn}</td>
 								<td>${book.title}</td>
-								<td>${book.author.name}</td>
-								<!-- <td><fmt:formatNumber value="${book.price}" type="CURRENCY" currencyCode="USD" /></td> -->
+								<td>${book.author}</td>
 							</tr>
 						    </c:forEach>
 				   	    </tbody>
