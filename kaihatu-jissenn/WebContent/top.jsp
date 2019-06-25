@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,72 +7,101 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
 -->
 
-	<link href="http://calil.jp/public/css/calilapi.css" rel="stylesheet" type="text/css" />
+<link href="http://calil.jp/public/css/calilapi.css" rel="stylesheet" type="text/css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-	<title>library_test</title>
+<title>library_test</title>
+<style>
+	/*　　　　 cssのフレームワーク*/
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</style>
 
 </head>
-<body>
-<div id ="title">
-<h2>図書検索へようこそ!<br>
-${account.userName} <p>さん</p></h2>
-</div>
+
+<body class="">
+	<div class="container">
+		<!-- 　　　<div id ="title"> -->
+			<div class="alert alert-secondary" role="alert">
+				<h2>図書検索へようこそ!</h2>
+			</div>
+			<br>
+			<h1><span class="badge badge-secondary">${account.userName} </span>さん</h1>
+			<br>
+
+			<div id="content">
+				<!-- 選択 -->
+				<div id="library" >
+					<h3>選択している図書館: <strong id="pref_name"></strong></h3>
+					<br>
+					<!-- 
+					<div id ="select-lib">
+						<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">別の市町村から図書館を選択</a></button>
+					</div>
+				    <br>
+
+					<div id="change_lib" >
+						<button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">登録している図書館の変更</a></button>
+						<strong id="registration_library"> ${library.place}</strong>
+					</div> -->				
+
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<button type="button" class="btn btn-outline-info"><a href="javascript:city_selector.showDlg();" class="alert-link">別の市町村から図書館を選択</a></button>
+						<button type="button" class="btn btn-outline-info"><a href="javascript:city_selector.showDlg();" class="alert-link">登録図書館の変更</a></button>
+						<strong id="registration_library"> ${library.place}</strong>
+					</div>
+				</div>
+				<br>
 
 
-<div id="content">
+				<!-- ISBNリスト -->
+				<h4>あなたのBOOK LIST:</h4>
+				<button type="submit" class="btn btn-warning" ><a href="map-after.jsp">マップを見る</a></button>
+				<div id = booklist>
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th></th>
+								<th>ISBN</th>
+								<th>タイトル</th>
+								<th>著者</th>
+							</tr>
+						</thead>>
+						<tbody>
+							<c:forEach var="book" items="${bookList}">
+							<tr>
+								<td><img src="img/${book.isbn}.webp" width="65px" height="15%"></td>
+								<td>${book.isbn}</td>
+								<td>${book.title}</td>
+								<td>${book.author.name}</td>
+								<!-- <td><fmt:formatNumber value="${book.price}" type="CURRENCY" currencyCode="USD" /></td> -->
+							</tr>
+						    </c:forEach>
+				   	    </tbody>
+				    </table>
+			    </div>
 
-	<!-- 選択 -->
-	<div id="library" >
-		<h2>選択している図書館: <strong id="pref_name"></strong></h2>
-		<br>
-		別の市町村から図書館を選択:		
-		<span id="library_change" style="font-size: 85%;"> (<a href="javascript:city_selector.showDlg();">図書館変更</a>)</span>
+			<!-- ここでデータベースから本のリストを持ってくる -->
+			<select name="" id="isbn_list" size=2>
+				<option value="9784403671586,9784065102497,99784088725093" selected>9784403671586,9784065102497,9784088725093</option>
+			</select>
+			　　　<!-- ここまでデータベースから本のリストを持ってくる -->
+
+			<!-- 結果の表示 -->
+			<div id="calil_booklist" class="clearfix">
+			</div>
+			<button type="submit" class="btn btn-warning" ><a href="loginback.do">ログアウト</a></button>
+		</div>
 	</div>
-	
-	<div id="change_lib" >
-		登録している図書館の市町村の変更:
-		<strong id="registration_library"> ${library.place}</strong>
-		<span id="library_change" style="font-size: 85%;"> (<a href="javascript:city_selector.showDlg();">図書館変更</a>)</span>
-	</div>
 
-	<!-- ISBNリスト -->
-	<h4>あなたのBook List:</h4>
-	<div id = booklist>
-		<table class="highlight responsive-table">
-				<tr>
-					<th></th>
-					<th>ISBN</th>
-					<th>TITLE</th>
-					<th>AUTHOR</th>
-				</tr>
-				<c:forEach var="book" items="${bookList}">
-					<tr>
-						<td><img src="img/${book.isbn}.webp" width="65px" height="15%"></td>
-						<td>${book.isbn}</td>
-						<td>${book.title}</td>
-						<td>${book.author.name}</td>
-						<td><fmt:formatNumber value="${book.price}" type="CURRENCY" currencyCode="USD" /></td>
-					</tr>
-				</c:forEach>
-		</table>
-	</div>
-	
-	<!-- ここでデータベースから本のリストを持ってくる -->
-	<select name="" id="isbn_list" size=2>
-		<option value="9784403671586,9784065102497,99784088725093" selected>9784403671586,9784065102497,9784088725093</option>
-	</select>
-　　　<!-- ここまでデータベースから本のリストを持ってくる -->
-
-	<!-- 結果の表示 -->
-	<div id="calil_booklist" class="clearfix">
-	</div>
-</div>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://calil.jp/public/js/calilapi.js">	
-</script>
-<script type="text/javascript">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://calil.jp/public/js/calilapi.js">	
+	</script>
+	<script type="text/javascript">
 	//デフォルトの図書館ID(sysytemid)
 	
 	//デフォルトは登録した図書館を表示したい」

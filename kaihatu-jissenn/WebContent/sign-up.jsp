@@ -39,13 +39,13 @@
 
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input id="password" name="password1" type="password"
+						<input id="password1" name="password1" type="password"
 						class="form-control" placeholder="パスワードを入力してください"　required>
 					</div>
 
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input id="password" name="password2" type="password"
+						<input id="password2" name="password2" type="password"
 						class="form-control" placeholder="パスワードをもう一度入力してください"　required>
 					</div>
 					<br>
@@ -60,7 +60,7 @@
 						<br>
 
 						<button type="button" class="btn btn-warning">アカウント登録</button>
-						<button type="submit" class="btn btn-warning" ><a href="loginback.do">戻る</a></button>
+						<button type="submit" class="btn btn-warning" ><a href="loginback.do">ログイン画面に戻る</a></button>
 						<p class="red-text darken-2">${error}</p>
 					</form>
 				</div>
