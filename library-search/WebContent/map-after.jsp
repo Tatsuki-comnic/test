@@ -192,8 +192,8 @@ button:disabled {
 <body ng-controller="app">
 	<div class="header">
 		<h2>
-			<span class="badge badge-secondary"><a href="top">${account.userName}
-			</a></span>さん <a href="login">ログアウト</a>
+			<span class="badge badge-secondary"><a href="top">${account.userName}</a>
+			</span>さん <a href="login">ログアウト</a>
 		</h2>
 	</div>
 

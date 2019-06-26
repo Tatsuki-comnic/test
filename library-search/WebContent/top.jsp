@@ -15,8 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-<title>library_test</title>
+<title>${account.userName}のマイページ</title>
 <style>
 	/*　　　　 cssのフレームワーク*/
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,7 +24,7 @@
 </style>
 
 </head>
- <button type="submit" class="btn btn-warning" ><a href="book-registration.do">本を登録する</a></button>
+ 
 <body class="">
 	<div class="container">
 		<!-- 　　　<div id ="title"> -->
@@ -63,7 +62,8 @@
 
 
 				<!-- ISBNリスト -->
-				<h4>あなたのBOOK LIST:</h4>
+				<h4>あなたのBOOK LIST:</h4>													
+				<button type="submit" class="btn btn-warning" ><a href="book-registration.do">本を登録する</a></button>
 				<button type="submit" class="btn btn-warning" ><a href="map-after.jsp">マップを見る</a></button>
 				<div id = booklist>
 					<table class="table">
@@ -96,7 +96,12 @@
 			<!-- 結果の表示 -->
 			<div id="calil_booklist" class="clearfix">
 			</div>
-			<button type="submit" class="btn btn-warning" ><a href="loginback.do">ログアウト</a></button>
+			<div class="text-right">
+			　　　<button type="submit" class="btn btn-warning">
+				<a href="loginback.do">ログアウト</a>
+			</button>
+		　　　 </div>
+			
 		</div>
 	</div>
 
