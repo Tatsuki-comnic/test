@@ -13,7 +13,8 @@
     <param-name>/book-registration.do</param-name>
     <param-value>controller.BookRegistrationAction</param-value>
   </context-param>
- 
+  
+  
   <context-param>
     <param-name>/mapback.do</param-name>
     <param-value>controller.MapBackAction</param-value>

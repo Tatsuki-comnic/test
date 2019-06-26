@@ -3,22 +3,22 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>book-registration</title>
 	</head>
 	<body class="">
         <div class="container">
                 <div class="alert alert-success" role="alert">
-                        <h2>アカウントを登録する</h2>
+                        <h2>${account.userName}さんの本を登録する</h2>
                 </div>
                 <div class="row">
-                        <form class="col s12" action="sign-up.do" method="post">
+                        <form class="col s12" action="book-registration.do" method="post">
                                 <div class="form-group">
                                         <br>
                                         <button type="button" class="btn btn-outline-info" ><a href="javascript:city_selector.showDlg();" class="alert-link">図書館登録</a></button>
                                         
                          
                                         <div class="form-group">
-                                                <label for="isbn">ほんのisbn</label>
+                                                <label for="isbn">本のisbn</label>
                                                 <input id="book-isbn" name="isbn" type="text" class="form-control" 
                                                 placeholder="isbnを入力" autofocus required>
                                         </div>
@@ -30,9 +30,9 @@
                                                 placeholder="ほ" autofocus required>
                                         </div>
                                         <div class="form-group">
-                                                <label for="password">Password</label>
+                                                <label for="password">著者</label>
                                                 <input id="password1" name="password1" type="password"
-                                                class="form-control" placeholder="パスワードを入力してください"　required>
+                                                class="form-control" placeholder="著者を入力してください"　required>
                                         </div>
       
                                         <br>
