@@ -1,4 +1,4 @@
-package jp.co.comnic.lesson.yoneyama.webapp.dao;
+6package jp.co.comnic.lesson.yoneyama.webapp.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
