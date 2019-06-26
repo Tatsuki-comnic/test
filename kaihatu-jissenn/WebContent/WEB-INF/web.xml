@@ -6,8 +6,12 @@
     <param-value>controller.LoginAction</param-value>
   </context-param>
   <context-param>
-    <param-name>/logout.do</param-name>
-    <param-value>controller.LogoutAction</param-value>
+    <param-name>/loginback.do</param-name>
+    <param-value>controller.LoginBackAction</param-value>
+  </context-param>
+  <context-param>
+    <param-name>/mapback.do</param-name>
+    <param-value>controller.MapBackAction</param-value>
   </context-param>
   <context-param>
     <param-name>/sign-up.do</param-name>
@@ -36,5 +40,21 @@
   <servlet-mapping>
     <servlet-name>sign-up</servlet-name>
     <url-pattern>/sign-up</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>library-address</servlet-name>
+    <jsp-file>/library-address.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>library-address</servlet-name>
+    <url-pattern>/library-address</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>map-after</servlet-name>
+    <jsp-file>/map-after.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>map-after</servlet-name>
+    <url-pattern>/map-after</url-pattern>
   </servlet-mapping>
 </web-app>
